@@ -4,11 +4,19 @@ import React from 'react'
 //     return <h1>hello ankit</h1>
 // }
 
-const Greet = (props) => {              //<Greet name="ankit" hero="superman"><p>class prop</p></Greet>
+// const Greet = ({name, hero}) => {              //Destructuring props
+//     return (                            //return only one element
+//         <div>                           
+//             <h1>hello {name} is {hero}</h1>
+//         </div>
+//     )
+// }
+
+const Greet = props => {             //Destructuring props within function
+    const {name,hero} = props
     return (                            //return only one element
         <div>                           
-            <h1>hello {props.name} is {props.hero}</h1>
-            {props.children}            //things within blocks
+            <h1>hello {name} is {hero}</h1>
         </div>
     )
 }
